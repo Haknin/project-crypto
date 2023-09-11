@@ -28,10 +28,14 @@ jobs:
           cd crypto-site/
           python3 pythonversioning.py
 
+      - name: Install gke-gcloud-auth-plugin
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y google-cloud-sdk-gke-gcloud-auth-plugin
+
       - name: Build And Push The Image To Docker Hub
         working-directory: crypto-site
         run: |
-          gcloud components install gke-gcloud-auth-plugin
           docker build -t haknin/crypto_docker:1.${{ github.run_number }} -t haknin/crypto_docker:latest .
           docker push haknin/crypto_docker:1.${{ github.run_number }}
           docker push haknin/crypto_docker:latest
