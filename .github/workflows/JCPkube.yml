@@ -63,11 +63,6 @@ jobs:
           gcloud container clusters get-credentials cluster-1093 --region=us-central1-c
           helm upgrade --install myapp flaskapp/ --set image.tag=1.${{ github.run_number }}
           
-      - name: Fix Line Endings in Shell Script
-        run: |
-          dos2unix project-crypto/Load-Balancer-IP.sh
-        working-directory: ${{ github.workspace }}/project-crypto
-      
       - name: Execute Shell Script
         run: |
           chmod +x project-crypto/Load-Balancer-IP.sh
