@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url('templates/background.gif');
+            background-size: cover;
+            background-position: center;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            color: rgb(10, 108, 79);
+        }
+
+        .links {
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .links a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #0a7d62d4;/*butten color*/
+            border-radius: 25px;
+            padding: 10px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #559d6f; /*butten text*/
+            transition: 0.3s ease all;
+            overflow: hidden;
+            width: 700px;
+            position: relative;
+            backdrop-filter: blur(1000px);
+            font-family: Arial, sans-serif;
+        }
+
+        .links a:before,
+        .links a:after {
+            font-size: 60px;
+            display: block;
+            position: absolute;
+        }
+
+        .links a:before {
+            content: "";
+            top: -120%;
+            right: -150px;
+            width: 250px;
+            height: 250px;
+            pointer-events: none;
+            transform: rotate(-25deg);
+            transition: 0.4s cubic-bezier(0.34, 0.31, 0, 1.81) transform;
+        }
+
+        .links a:after {
+            content: "";
+            top: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            right: 30px;
+            transform: translateX(90px);
+            transition: 0.3s cubic-bezier(0.34, 0.31, 0, 1.81) transform;
+        }
+
+        /*the buttnes */
+        .links a:hover {
+            background: rgb(14, 101, 65); /*the buttnes hover */
+            box-shadow: 5px 5px 0 rgb(39, 50, 45);/*the buttnes hover shadow */
+        }
+
+        .links a:hover:before {
+            transform: rotate(-25deg) translateX(60px);
+        }
+
+        .links a:hover:after {
+            transform: none;
+        }
+
+        .links a strong {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .links a span {
+            color: #24a97fb8;
+            font-size: 0.9rem;
+        }
+
+        /*head line*/
+        .container {
+            padding: 100px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #9febcb;
+            position: relative; /* Added position relative */
+        }
+
+        .content {
+            font-size: 0.8rem;
+            z-index: 2;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        /*head line frame*/
+        .maintitle1 {
+            z-index: 2;
+            text-align: center;
+            font-size: 3rem;
+            font-family: Arial, sans-serif;
+            text-shadow: -1px 1px 2px #0a7a42, 1px 2px 6px #1dfab4, 1px -1px 0 #0a4c30, -1px -1px 0 #cd974099;
+        }
+
+        .transparent-square1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-25%);
+            width: 700px;
+            height: 700px;
+            border-radius: 25px;
+            background-color: rgba(220, 20, 123, 0.609);
+            opacity: 1;
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+
+        /*the main card's frame */
+        .card {  
+            top: -500px;
+            width: 800px;
+            height: 700px;
+            opacity: 0.8;
+            backdrop-filter: blur(10px);
+            background: #876d16;
+            position: relative;
+            display: flex;
+            place-content: center;
+            place-items: center;
+            overflow: hidden;
+            border-radius: 20px;
+            z-index: -1;
+        }
+        
+        /* */
+        .card h2 {
+            z-index: 1;
+            color: #ebc89f;
+            font-size: 2em;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            width: 100px;
+            background-image: linear-gradient(180deg, #e0f7ed, #5abd8a);
+            height: 130%;
+            animation: rotBGimg 3s linear infinite;
+            transition: all 0.2s linear;
+        }
+
+        @keyframes rotBGimg {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /*main card */
+        .card::after {
+            content: '';
+            position: absolute;
+            background: #0a613c;
+            inset: 5px;
+            border-radius: 15px;
+        }
+
+        .visit-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(238, 233, 233, 0);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            color: #ebc89f;
+            z-index: 2; /* Added z-index to make it appear on top */
+        }
+        .social {
+  position: fixed;
+  top: 50px;
+  font-family: Gill Sans, sans-serif;
+}
+.social ul {
+  padding: 0px;
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: #1E4343;
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+.social ul li:hover {
+  transform: translate(110px, 0);
+  backdrop-filter: blur(25px) saturate(200%);
+  -webkit-backdrop-filter: blur(25px) saturate(200%);
+  background-color: #302f2fd7;
+}
+.social ul li:hover a {
+  color: #ffffff;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: #1E4343;
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.social ul li i {
+  margin-left: 10px;
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  transform: rotate(0deg);
+}
+    </style>
+</head>
+
+<body>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<nav class="social">
+    <ul> 
+        <li><a href="https://github.com/Haknin/crypto-site.git">Github <i class="fa fa-github"></i></a></li>
+        <li><a href="www.linkedin.com/in/ori-haknin">Linkedin <i class="fa fa-linkedin"></i></a></li>
+          </ul>
+    </nav>
+    <div class="container">
+        <div class="visit-count">
+            <h2>Visit Count: {{ count }}</h2>
+        </div>
+        <div class="maintitle1">
+            <h1>Crypto Prices</h1>
+        </div>
+        <div class="content">
+            <h1>Choose A Cryptocurrency</h1>
+        </div>
+
+        <div class="links">
+            <a href="/eth" rel="noopener noreferrer">
+                <strong>Ethereum</strong>
+            </a>
+
+            <a href="/btc" rel="noopener noreferrer">
+                <strong>Bitcoin</strong>
+            </a>
+
+            <div class="card"></div>
+        </div>
+    </div>
+
+</script>
+</body>
+</html>

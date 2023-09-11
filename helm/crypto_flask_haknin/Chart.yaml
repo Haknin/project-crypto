@@ -1,0 +1,4 @@
+apiVersion: v2
+name: flaskapp
+description: A Helm chart for deploying Flask applications with Docker containers
+version: 0.1.14

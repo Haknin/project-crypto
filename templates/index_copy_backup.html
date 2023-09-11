@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         body {
+            background-image: url('https://i.redd.it/0bb6dqsiab451.gif');
+            background-size: cover;
+            background-position: middle;
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        
+        code {
+      display: inline-block;
+      padding: 3px 6px;
+      margin-left: 3px;
+      margin-right: 3px;
+      border-radius: 5px;
+      font-size: 0.8rem;
+      background: #1a2279;
+      color: #dbf1f5;
+    }
+
+          .links {
+            z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .links a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.55); /* Set the background color and transparency */
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.3s ease all;
+  overflow: hidden;
+  width: 250px; /* Adjust the width as desired */
+  position: relative; /* Add this line */
+  backdrop-filter: blur(1000px); /* Add backdrop filter for blur effect */
+  font-family: Arial, sans-serif;
+}
+
+
+      .links a:before,
+      .links a:after {
+        font-size: 40px;
+        display: block;
+        position: absolute;
+      }
+
+      .links a:before {
+        content: "";
+        top: -120%;
+        right: -150px;
+        width: 250px;
+        height: 250px;
+        pointer-events: none;
+        transform: rotate(-25deg);
+        transition: 0.4s cubic-bezier(0.34, 0.31, 0, 1.81) transform;
+      }
+
+      .links a:after {
+        content: "";
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        right: 30px;
+        transform: translateX(80px);
+        transition: 0.3s cubic-bezier(0.34, 0.31, 0, 1.81) transform;
+      }
+
+      .links a:hover {
+  background: rgb(255, 255, 255); /* Change to solid background color */
+  box-shadow: 5px 5px 0 rgb(0, 0, 0);
+}
+
+
+      .links a:hover:before {
+        transform: rotate(-25deg) translateX(60px);
+      }
+
+      .links a:hover:after {
+        transform: none;
+      }
+
+
+      .links a strong {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+          .links a strong {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .links a span {
+        color: #000000;
+        font-size: 0.9rem;
+      }
+          .container {
+            padding: 70px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+          }
+
+    .content {
+      font-size: 0.8rem;
+      z-index: 2;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      
+    }  
+    .maintitle1 {
+      z-index: 2;
+      text-align: center;
+      font-size: 3rem;
+      font-family: Arial, sans-serif;
+      text-shadow: -1px 1px 2px #000,
+				  1px 2px 6px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
+    }
+
+    .transparent-square1 {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 700px;
+            height: 700px;
+            border-radius: 25px;
+            background-color: rgba(0, 0, 0, 0.609);
+            opacity: 1;
+            backdrop-filter: blur(10px);
+            z-index: -1;
+        }
+        
+      
+    </style>
+</head>
+<body>
+  <div class="container"></div>
+  <div class="maintitle1">
+    <h1>Crypto Prices</h1>
+  </div>
+  <div class="content">
+      <h1>To Refresh The Price Enter The Button Below</h1>
+        <h1>Bitcoin Price: {{ bitcoin_price }}</h1>
+        <h1>Ethereum Price: {{ eth_price }}</h1>
+  </div>
+
+  <div class="links">
+    <a href="/status" rel="noopener noreferrer">
+      <strong>refresh</strong>
+      <span>See The Prices Of Crypto</span>
+    </a>
+
+    <div class="transparent-square1"></div>
+  </div>
+</body>
+</html>
