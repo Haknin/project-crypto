@@ -58,7 +58,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Deploy Using Helm
-        working-directory: crypto-site
+        working-directory: project-crypto
         run: |
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/helm-project-0.1.9.tgz helm.tgz 
