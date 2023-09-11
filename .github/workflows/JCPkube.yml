@@ -41,7 +41,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: clone_and_build
     steps:
-      
+      - name: Checkout code
+        uses: actions/checkout@v2
+    
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.0
         with:
@@ -58,7 +60,6 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Deploy Using Helm
-        uses: actions/checkout@v2
         run: |
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/helm-project-0.1.9.tgz helm.tgz 
