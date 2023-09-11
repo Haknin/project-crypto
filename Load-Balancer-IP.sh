@@ -1,4 +1,4 @@
-#!/usr/bin/bash -xe
+#!/usr/bin/bash
 
 # Function to get the LoadBalancer IP
 get_loadbalancer_ip() {
