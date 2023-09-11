@@ -25,7 +25,7 @@ jobs:
         run: |
           pip install docker
           echo "apply the script"
-          cd crypto-site/
+          cd project-crypto/
           python3 pythonversioning.py
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0.2.0
@@ -44,7 +44,7 @@ jobs:
           docker image ls --format '{{.ID}}' haknin/crypto_docker --filter 'dangling=false' | sort -r | awk 'NR>4' | xargs -I {} docker image rm -f {}
 
       - name: Deploy Using Helm
-        working-directory: crypto-site
+        working-directory: project-crypto
         run: |
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/helm-project-0.1.9.tgz helm.tgz 
