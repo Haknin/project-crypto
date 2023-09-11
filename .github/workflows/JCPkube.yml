@@ -63,8 +63,7 @@ jobs:
           gcloud container clusters get-credentials cluster-1093 --region=us-central1-c
           helm upgrade --install myapp flaskapp/ --set image.tag=1.${{ github.run_number }}
           
-      - name: Execute Shell Script
+      - name: Find your inner IP
         run: |
-          chmod +x project-crypto/Load-Balancer-IP.sh
-          bash project-crypto/Load-Balancer-IP.sh
-        working-directory: ${{ github.workspace }}/project-crypto
+          chmod +x crypto-site/Load-Balancer-IP.sh
+          bash crypto-site/Load-Balancer-IP.sh
