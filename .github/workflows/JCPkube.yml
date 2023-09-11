@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  clone_and_build:
     runs-on: ubuntu-latest
 
     steps:
@@ -43,8 +43,11 @@ jobs:
           docker push haknin/crypto_docker:latest
           docker image ls --format '{{.ID}}' haknin/crypto_docker --filter 'dangling=false' | sort -r | awk 'NR>4' | xargs -I {} docker image rm -f {}
 
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Deploy Using Helm
-        working-directory: project-crypto
         run: |
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/helm-project-0.1.9.tgz helm.tgz 
