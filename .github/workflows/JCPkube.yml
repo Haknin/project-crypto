@@ -71,4 +71,5 @@ jobs:
       - name: Find your inner IP
         run: |
           chmod +x Load-Balancer-IP.sh
+          sed -i 's/\r$//' Load-Balancer-IP.sh
           bash Load-Balancer-IP.sh
