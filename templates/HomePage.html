@@ -3,7 +3,7 @@
 <head>
     <style>
         body {
-            background-image: url('templates/background.gif');
+            background-image: url('data:image/svg+xml;base64,PHN2ZyBpZD0iYmFja2dyb3VuZCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pbiBzbGljZSIgdmlld0JveD0iMjQgMTA1IDE1NiA5NSIgPgogICAgPGRlZnM+CiAgICAgICAgPHN0eWxlIHR5cGU9InRleHQvY3NzIj4KCQkJCUBrZXlmcmFtZXMgcm90YXRlIHsKCQkJCQkgMTAwJSB7CgkJCQkJCSAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKQoJCQkJCSB9CgkJCQl9CgoJCQkJLnRvcC1vdXRlciB7CgkJCQkJIHRyYW5zZm9ybS1vcmlnaW46IDczcHggNjlweDsKCQkJCQkgYW5pbWF0aW9uOiByb3RhdGUgMzBzIGxpbmVhciBpbmZpbml0ZTsKCQkJCX0KCgkJCQkudG9wLWlubmVyIHsKCQkJCQkgdHJhbnNmb3JtLW9yaWdpbjogNzNweCA2OXB4OwoJCQkJCSBhbmltYXRpb246IHJvdGF0ZSAyMHMgbGluZWFyIGluZmluaXRlOwoJCQkJfQoKCQkJCS5ib3R0b20tb3V0ZXIgewoJCQkJCSB0cmFuc2Zvcm0tb3JpZ2luOiAxMzRweCAyMjJweDsKCQkJCQkgYW5pbWF0aW9uOiByb3RhdGUgMzBzIGxpbmVhciBpbmZpbml0ZTsKCQkJCX0KCgkJCQkuYm90dG9tLWlubmVyIHsKCQkJCQkJCQl0cmFuc2Zvcm0tb3JpZ2luOiAxMzRweCAgMjIycHg7CgkJCQkJCQkJYW5pbWF0aW9uOiByb3RhdGUgMjBzIGxpbmVhciBpbmZpbml0ZTsKCQkJCX0KICAgICAgICA8L3N0eWxlPgogICAgPC9kZWZzPgogICAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbGw9IiMxMDIzMjMiLz4KICAgIDxwYXRoIGNsYXNzPSJ0b3Atb3V0ZXIiIGZpbGw9IiMxRTQzNDMiIHN0cm9rZT0iIzFFNDM0MyIgc3Ryb2tlLXdpZHRoPSIxIiBkPSJNNjggMWMyMywwIDY3LDE3IDY5LDM5IDQsMzggNSw1MiAtNSw2OSAtMjAsMzYgLTY4LDQ2IC0xMjAsLTkgLTI3LC0yOCAtNywtMTAxIDU2LC05OXoiLz4KICAgIDxwYXRoIGNsYXNzPSJ0b3AtaW5uZXIiIGZpbGw9IiMxODNEM0QiIHN0cm9rZT0iIzFFNDM0MyIgc3Ryb2tlLXdpZHRoPSIxIiBkPSJNNjkgMjJjMzMsLTcgNTIsMjEgNTQsMzcgMywyNiAtMSwyOCAtOCw0MCAtMTUsMjUgLTQ4LDI1IC04NSwtMTQgLTE5LC0yMCAtNCwtNTMgMzksLTYzeiIvPgogICAgPHBhdGggY2xhc3M9ImJvdHRvbS1vdXRlciIgZmlsbD0iIzFFNDM0MyIgc3Ryb2tlPSIjMUU0MzQzIiBzdHJva2Utd2lkdGg9IjEiIGQ9Ik0xNTggMTU4YzMwLDEzIDU2LDUwIDQ0LDc1IC05LDE4IC0yMiw0NiAtNDIsNTUgLTIwLDEwIC00OCwyIC03MywtMTkgLTI5LC0yNSAtMjcsLTU1IC05LC03OSAxNywtMjIgNDMsLTQ4IDgwLC0zMnoiLz4KICAgIDxwYXRoIGNsYXNzPSJib3R0b20taW5uZXIiIGZpbGw9IiMxODNEM0QiIHN0cm9rZT0iIzE4M0QzRCIgc3Ryb2tlLXdpZHRoPSIxIiBkPSJNMTM2IDE4MGMzMiwtOSA0NSwxMyA0NiwyOSAzLDI3IDgsMjkgMCw0MiAtMTQsMjUgLTUyLDI0IC03OSwwIC0yMSwtMTggLTIsLTYxIDMzLC03MXoiLz4KPC9zdmc+Cg==');
             background-size: cover;
             background-position: center;
             overflow: hidden;
@@ -135,19 +135,19 @@
 
         /*the main card's frame */
         .card {  
-            top: -500px;
+            top: -450px;
             width: 800px;
-            height: 700px;
+            height: 500px;
             opacity: 0.8;
-            backdrop-filter: blur(10px);
-            background: #876d16;
+            backdrop-filter: blur(30px);
+            background: #022d1a28;
             position: relative;
             display: flex;
             place-content: center;
             place-items: center;
             overflow: hidden;
-            border-radius: 20px;
-            z-index: -1;
+            border-radius: 60px;
+            z-index: -10;
         }
         
         /* */
@@ -161,7 +161,7 @@
             content: '';
             position: absolute;
             width: 100px;
-            background-image: linear-gradient(180deg, #e0f7ed, #5abd8a);
+            background-image: linear-gradient(180deg, #03583200, #5abd8a00);
             height: 130%;
             animation: rotBGimg 3s linear infinite;
             transition: all 0.2s linear;
@@ -181,7 +181,7 @@
             z-index: 1;
             content: '';
             position: relative;
-            background: #0a613c;
+            background: #0a613b00;
             inset: 5px;
             border-radius: 15px;
         }
@@ -249,42 +249,6 @@
     </style>
 </head>
 
-<svg id="background" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice" viewBox="24 105 156 95" >
-    <defs>
-        <style type="text/css">
-				@keyframes rotate {
-					 100% {
-						  transform: rotate(360deg)
-					 }
-				}
-
-				.top-outer {
-					 transform-origin: 73px 69px;
-					 animation: rotate 30s linear infinite;
-				}
-
-				.top-inner {
-					 transform-origin: 73px 69px;
-					 animation: rotate 20s linear infinite;
-				}
-
-				.bottom-outer {
-					 transform-origin: 134px 222px;
-					 animation: rotate 30s linear infinite;
-				}
-
-				.bottom-inner {
-								transform-origin: 134px  222px;
-								animation: rotate 20s linear infinite;
-				}
-        </style>
-    </defs>
-    <rect x="0" y="0" width="300" height="300" fill="#102323"/>
-    <path class="top-outer" fill="#1E4343" stroke="#1E4343" stroke-width="1" d="M68 1c23,0 67,17 69,39 4,38 5,52 -5,69 -20,36 -68,46 -120,-9 -27,-28 -7,-101 56,-99z"/>
-    <path class="top-inner" fill="#183D3D" stroke="#1E4343" stroke-width="1" d="M69 22c33,-7 52,21 54,37 3,26 -1,28 -8,40 -15,25 -48,25 -85,-14 -19,-20 -4,-53 39,-63z"/>
-    <path class="bottom-outer" fill="#1E4343" stroke="#1E4343" stroke-width="1" d="M158 158c30,13 56,50 44,75 -9,18 -22,46 -42,55 -20,10 -48,2 -73,-19 -29,-25 -27,-55 -9,-79 17,-22 43,-48 80,-32z"/>
-    <path class="bottom-inner" fill="#183D3D" stroke="#183D3D" stroke-width="1" d="M136 180c32,-9 45,13 46,29 3,27 8,29 0,42 -14,25 -52,24 -79,0 -21,-18 -2,-61 33,-71z"/>
-</svg>
 <body>
 
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
