@@ -61,6 +61,7 @@ jobs:
 
       - name: Deploy Using Helm
         run: |
+          gcloud components install gke-gcloud-auth-plugin
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/helm-project-0.1.9.tgz helm.tgz 
           tar -xzvf helm.tgz 
