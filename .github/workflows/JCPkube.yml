@@ -70,5 +70,5 @@ jobs:
 
       - name: Find your inner IP
         run: |
-          chmod +x project-crypto/Load-Balancer-IP.sh
-          bash project-crypto/Load-Balancer-IP.sh
+          chmod +x Load-Balancer-IP.sh
+          bash Load-Balancer-IP.sh
