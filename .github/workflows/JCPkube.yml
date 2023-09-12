@@ -64,10 +64,8 @@ jobs:
           gcloud components install gke-gcloud-auth-plugin
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/flaskapp-0.1.20.tgz helm.tgz 
-          tar -xzvf helm.tgz 
           gcloud container clusters get-credentials cluster-1093 --region=us-central1-c
-          helm upgrade --install myapp flaskapp/ --set image.tag=1.${{ github.run_number }}
-
+          helm upgrade --install flaskapp flaskapp-0.1.20.tgz --namespace test
       - name: Find your inner IP
         run: |
           chmod +x Load-Balancer-IP.sh
