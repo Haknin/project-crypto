@@ -65,6 +65,7 @@ jobs:
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/flaskapp-0.1.14.tgz helm.tgz 
           tar -xzvf helm.tgz 
+          helm repo add
           gcloud container clusters get-credentials cluster-1093 --region=us-central1-c
           helm upgrade --install myapp flaskapp/ --set image.tag=1.${{ github.run_number }}
 
