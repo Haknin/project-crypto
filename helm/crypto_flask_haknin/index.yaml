@@ -7,6 +7,6 @@ entries:
     digest: 9ef9f136749ef9d7bc5da7ca19de48fd2885acb00f5fd8781513b5c15e5b46ec
     name: flaskapp
     urls:
-    - flaskapp-0.1.14.tgz
-    version: 0.1.14
+    - flaskapp-0.1.20.tgz
+    version: 0.1.20
 generated: "2023-09-12T12:31:26.9423446+03:00"
