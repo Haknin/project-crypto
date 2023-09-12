@@ -65,11 +65,9 @@ jobs:
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/flaskapp-0.1.21.tgz .
           gcloud container clusters get-credentials cluster-1093 --region=us-central1-c
+          kubectl rollout restart deployment flask-app-deployment -n default
           helm upgrade --install myapp flaskapp-0.1.21.tgz
           
-      - name: Rollout Deployment
-        run: kubectl rollout restart deployment flask-app
-        
       - name: Find your inner IP
         run: |
           chmod +x Load-Balancer-IP.sh
