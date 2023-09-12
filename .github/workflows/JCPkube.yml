@@ -65,6 +65,7 @@ jobs:
           echo ${{ github.run_number }}
           gsutil cp gs://bucket-haknin/flaskapp-0.1.21.tgz .
           gcloud container clusters get-credentials cluster-1093 --region=us-central1-c
+          helm repo remove mpapp
           helm upgrade --install myapp flaskapp-0.1.21.tgz 
           
       - name: Find your inner IP
