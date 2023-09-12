@@ -2,11 +2,11 @@ apiVersion: v1
 entries:
   flaskapp:
   - apiVersion: v2
-    created: "2023-09-12T12:31:26.9423446+03:00"
+    created: "2023-09-12T14:33:13.3469134+03:00"
     description: A Helm chart for deploying Flask applications with Docker containers
-    digest: 9ef9f136749ef9d7bc5da7ca19de48fd2885acb00f5fd8781513b5c15e5b46ec
+    digest: 66ddda146381cb5015653f0939d5f94759302cd9cbe729a2b11cd93eba3f7c0c
     name: flaskapp
     urls:
-    - flaskapp-0.1.20.tgz
-    version: 0.1.20
-generated: "2023-09-12T12:31:26.9423446+03:00"
+    - flaskapp-0.1.21.tgz
+    version: 0.1.21
+generated: "2023-09-12T14:33:13.3464136+03:00"
