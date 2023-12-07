@@ -8,5 +8,5 @@ Werkzeug==1.0.1
 mysqlclient==2.0.3
 mysql
 mysql-connector-python
-requests
+requests 
 redis==3.5.3
