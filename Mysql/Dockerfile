@@ -8,3 +8,7 @@ ENV MYSQL_DATABASE flask_db
 # All scripts in docker-entrypoint-initdb.d/ are automatically
 # executed during container startup
 COPY ./Script-SQL/ /docker-entrypoint-initdb.d/
+
+
+
+#upgrade of the db
